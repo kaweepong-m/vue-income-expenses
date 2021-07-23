@@ -53,8 +53,13 @@ export default {
 
   methods: {
     handleAddBtn() {
-      if (!this.$refs.dateInput.value || !this.name || !this.price) {
-        alert("กรุณาใส่ข้อมูลให้ครบ");
+      if (
+        !this.$refs.dateInput.value ||
+        !this.name ||
+        !this.price ||
+        !Number.isInteger(parseInt(this.price))
+      ) {
+        alert("กรุณาใส่ข้อมูลให้ครบ/ถูกต้อง");
       } else {
         this.type = this.$refs.typeInput.value;
         this.date = this.$refs.dateInput.value;

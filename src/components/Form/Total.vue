@@ -26,6 +26,18 @@ export default {
   },
   props: ["taskList"],
 
+  created() {
+    this.taskList.map((task) => {
+      if (task.type === "รายรับ") {
+        this.totalIn += parseInt(task.price);
+      } else {
+        this.totalEx += parseInt(task.price);
+      }
+
+      this.total = this.totalIn - this.totalEx;
+    });
+  },
+
   watch: {
     taskList: function (newVal) {
       let sumIn = 0;

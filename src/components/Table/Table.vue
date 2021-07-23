@@ -11,7 +11,12 @@
         </tr>
       </thead>
       <tbody>
-        <TableMember v-for="(task,index) in taskList" :key="index" v-bind:data="task" v-bind:index="index + 1"/>
+        <TableMember
+          v-for="(task, index) in taskList"
+          :key="index"
+          v-bind:data="task"
+          v-bind:index="index + 1"
+        />
       </tbody>
     </table>
   </div>
