@@ -1,6 +1,6 @@
 # vue-income-expenses
 
-## การรัน
+## ขั้นตอนการ run
 ```
 npm install
 npm run serve
